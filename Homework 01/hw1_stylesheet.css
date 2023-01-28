@@ -1,0 +1,35 @@
+body {
+    background-color: F6F6F6;
+    font-family: georgia, times, times new roman, serif;
+    color: #05080C;
+    font-size: 18px;
+    line-height: 1.5;
+    border-top: 5px solid #222222;
+    border-bottom: 5px solid #222222;
+}
+
+img {
+  float: right;
+  margin-left: 50px;
+}
+
+h1 {
+  text-decoration: underline;
+}
+
+p {
+    font-family: georgia, times, times new roman, serif;
+}
+
+th {
+    background-color: #222222;
+    color: #FFFFFF;
+  }
+  
+  td {
+    background-color: #eeeeee;
+  }
+
+a {
+  color: #2c7f1e;
+}
