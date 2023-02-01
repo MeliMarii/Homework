@@ -21,16 +21,23 @@ h1, h2, h3, h4, h5, h6, p {
   display: flex;
   gap: 30px;
   list-style-type: none;
+  color: white;
 }
 
 .secondHeader {
-  
   color: black;
-  text-align: center;
+  text-align:center;
   font-size: 30px;
  
 }
 
+.line {
+text-decoration: line-through;
+}
+
+.underline {
+text-decoration: underline #f2ff00;
+}
 
 
 .mainMatch {
@@ -39,6 +46,7 @@ h1, h2, h3, h4, h5, h6, p {
   display: flex;
   height: 100%;
   justify-content: flex-end;
+  
 }
 
 .boxSets {
@@ -60,19 +68,23 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 75px;
 }
 
-.footer {
-background-color: black;
-color: white;
-  
-}
-
-
 p {
     font-size: 18px;
     line-height: 1.5;
     padding: 15px 0;
   }
   
+  .footer {
+    padding: 75px;
+    margin-top: auto;
+    /*  */
+ 
+    
+    background-color: black;
+    color: white;
+  }
+
+
   /* Fonts, classes are so I can reuse the styles on a variety of elements */
   .merriweather { font-family: 'Merriweather', serif; }
         .oswald { font-family: 'Oswald', sans-serif; }
