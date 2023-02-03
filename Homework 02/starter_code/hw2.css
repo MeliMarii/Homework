@@ -6,15 +6,17 @@ h1, h2, h3, h4, h5, h6, p {
   }
   
 .mainHeader {
-  background-color: black;
+  display: flex;
+  background-color: black; 
   color: #f2ff00;
   border-bottom: 5px solid #f2ff00;
-  padding: 10px 30px;
+  padding: 2px 1px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-family: 'Merriweather', serif;
-  font-size: 30px;
+  font-size: 18px;
+  font-weight: bold; 
 }
 
 .headerNav ul {
@@ -22,13 +24,16 @@ h1, h2, h3, h4, h5, h6, p {
   gap: 30px;
   list-style-type: none;
   color: white;
+  font-size: 18px;
 }
 
-.secondHeader {
+.secondHeader h2 {
   color: black;
-  text-align:center;
-  font-size: 30px;
- 
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #878787;
+  font-family: 'Merriweather', serif;
 }
 
 .line {
@@ -39,14 +44,18 @@ text-decoration: line-through;
 text-decoration: underline #f2ff00;
 }
 
-
-.mainMatch {
-  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/coworking.jpg') center center no-repeat;
-  background-size: cover;
+.imageBox {
   display: flex;
-  height: 100%;
-  justify-content: flex-end;
-  
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/coworking.jpg);
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+.imageBox p {
+  text-align: center;
+  justify-content: center;
 }
 
 .boxSets {
@@ -75,13 +84,9 @@ p {
   }
   
   .footer {
-    padding: 75px;
-    margin-top: auto;
-    /*  */
- 
-    
     background-color: black;
     color: white;
+    text-align: left;
   }
 
 
