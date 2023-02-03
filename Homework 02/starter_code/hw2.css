@@ -33,7 +33,10 @@ h1, h2, h3, h4, h5, h6, p {
   font-size: 25px;
   font-weight: bold;
   background-color: #878787;
+  padding: 15px;
   font-family: 'Merriweather', serif;
+  display:flex;
+  justify-content: center;
 }
 
 .line {
@@ -88,6 +91,7 @@ p {
     color: white;
     text-align: left;
   }
+
 
 
   /* Fonts, classes are so I can reuse the styles on a variety of elements */

@@ -4,34 +4,109 @@ Gray: #e8e9ea  / RGBA (232,233,234,1)
 Dark Text: #3b4144 / RGBA (59,65,68,1)
  */
 
-
-.nav1 ul {
-   display: grid; 
-   list-style-type: none;
-   
-   
+p {
+    margin:30px;
+    font-family: 'Source Sans Pro', sans-serif;
 }
+
+
+/* Navigation Area */
+
+.nav {
+    background-color: #32b64c;
+    color: white;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;   
+    
+    
+    
+    /* background-color: #20c063; 
+    color: white;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%; */
+    
+}
+
+.logo_container {
+    width: 100px;
+}
+
+
+.nav1 {
+    background-color: pink;
+}
+
+    
+    
+.nav1 ul {
+   list-style-type: none;   
+   display: flex;
+  
+  
+  
+  
+}
+
+
+.nav2 {
+background-color: yellow;
+
+}
+
 
 .nav2 ul {
-    display: grid; 
-    list-style-type: none;
+    list-style-type: none; 
+   display:flex;
 }
 
+
+
+
+
+
+
+/* Center and Listings */
 .trulia-grid {
-    display: grid;
+    display:grid;
     grid-template-columns: 1fr 1fr 1fr;
+   gap: 30px;
+   object-fit: cover;
+    
+
+
+
+    /* display: grid; 
+    grid-template-columns: 3fr 3fr 3fr;
     gap: 10px;
-       
+    background-color: #e8e9ea;
+    object-fit: cover;   */
+        
 }
+
+.trulia-grid-item {
+    border-radius: 25px;
+    background-color: blue;
+}
+
+
+.trulia-house-beds {
+  object-fit: cover;
+    
+  
+  
+}
+
 
 .trulia-grid li {
     list-style-type: none;
-    height: auto;
-    width: auto;
+    text-align: left;
+    font-size: 10px;
+    background-color: white;
+   
 }
 
-
-.footer {
-    display: grid;
-    grid-template-rows: 1fr;
+.search {
+    text-align: center;
 }
