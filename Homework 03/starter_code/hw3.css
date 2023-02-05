@@ -30,19 +30,19 @@ p {
 
 
 .nav1 {
- min-width: 75%;
+    min-width: 75%;
 }
 
     
 .nav1 ul {
-list-style-type: none;   
-display: flex;
-gap: 10px;
+    list-style-type: none;   
+    display: flex;
+    gap: 10px;
 }
 
 
 .nav2 {
-min-width: 20%;
+    min-width: 20%;
 }
 
 
@@ -73,6 +73,8 @@ a:link {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
     background-color: #e8e9ea;
+    padding-bottom: 30px;
+    padding-right: 20px;
 }
 
 .trulia-grid-item {
@@ -81,14 +83,17 @@ a:link {
     margin-top: 20px;
     margin-left: 20px;   
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 360px;
 }
 
 .trulia_image {
- height: 250px;
- background-size: cover;
-background-position: center;
-border-top-right-radius: 15px;
-border-top-left-radius: 15px;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
 }
 
 
@@ -96,22 +101,87 @@ border-top-left-radius: 15px;
 background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/house-1.jpg);
 }
 
-
-.trulia-house-facts {
-    display: flex;
-    flex-direction: column;
-
+#house2 {
+background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/house-2.jpg);
 }
 
-.arrow-svg{
+#house3 {
+background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/house-3.jpg);
+}
+
+#house4 {
+background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/house-4.jpg);
+}
+
+#house5 {
+background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/house-5.jpg);
+}
+
+#house6 {
+background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/house-6.jpg);
+}
+
+#house7 {
+background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/house-7.jpg);
+}
+
+#house8 {
+background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/house-8.jpg);
+}
+
+#house9 {
+background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/house-09.jpg);
+}
+
+#house10 {
+background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/house-10.jpg);
+}
+
+#house11 {
+background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/house-11.jpg);
+}
+
+#house12 {
+background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/house-12.jpg);
+}
+
+.trulia-article-icon {
     height: 15px;
 }
+
+.arrow-svg {
+    height: 15px;
+}
+
+.new-box {
+    background-color: #20c063;
+    color: white;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+
+.for-sale {
+    background-color: #e8e9ea;
+    color: #3b4144;
+    height: 20px;
+    width: 170px;
+}
+
 .trulia-grid li {
     list-style-type: none;
-    font-size: 15px;
+    font-size: 12px;
     background-color: white;
-  
-      
+}
+
+
+/* Bottom navigation */
+
+.bottom_nav li {
+    list-style: none;
+    text-align: center;
 }
 
 .search {
