@@ -55,18 +55,25 @@
     width: 35%;
 }
 
-.fluffAreaBox {
+.fluffArea {
     border-radius: 10px;
-    border: 8px solid blue;
+    border: 5px solid blue;
+    margin-top: 10px;
+}
+.fluffAreaBox {
+    border-radius: 6px;
+    /* border: 1px solid #FAD14B; */
     margin-top: 20px;
     margin-right: 300px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .secondFluffAreaBox {
     border-radius: 10px;
-    border: 8px solid blue;
+    /* border: 1px solid #FAD14B; */
     margin-top: 5px;  
     margin-left: 300px; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .photoContainerItems {
@@ -88,6 +95,8 @@
 }
 
 .discountBox {
-    border: 10px solid blue;
+    border: 5px solid blue;
     margin-top: 100px;
+    border-radius: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
