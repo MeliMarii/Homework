@@ -1,20 +1,27 @@
-// variables needed for age 55 and up, military, and airline crew
+function checkButton() {  
+     if(document.getElementById('yes').checked) { 
+         document.getElementById("disp").innerHTML 
+            = 
+             " You qualify for a discount!"; 
+     } 
 
-const age = >==55
-const airline = true
-const military = true
+    if(document.getElementById('yes2').checked) { 
+        document.getElementById("disp").innerHTML 
+            = 
+             " You qualify for a discount!"; 
+    } 
 
-// if all 3 are true, display 30% discount box
-function{
-    if age = >= 55
-    (console.log)
-}
+    if(document.getElementById('yes3').checked) { 
+        document.getElementById("disp").innerHTML 
+            = 
+             " You qualify for a discount!"; 
+    } 
 
-else {
+    else if(document.getElementById('no').checked) { 
+        document.getElementById("disp").innerHTML 
+            = 
+             " Sorry, no discount available at this time";   
+    }
     
-}
-
-// if only one is true, display 30% discount
-
-
-// if none are true, display no discount
+   
+} 

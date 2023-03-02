@@ -25,7 +25,7 @@
     <div class="insertDiv">
         <p>Have you always wanted to explore the world but didn't know where to start?<br> Begin your journey here!<br> We have packages for all your travel needs.</p>
         <!-- Create functions to make button work/clickable -->
-        <button type="button">Contact Us</button>
+        <p><button>Contact Us</button></p>
     </div>
 </section>
 
@@ -49,13 +49,52 @@
 
 <section class="discount">
         <div class="discountBox">
-            <p>Add your information to see if you qualify for a discount:</p>
-        </div>
-        <!-- add discount options in javascript for age 55+, airline crew, active in military or veteran.
-        Create a <form> for information added-->
+            <h3>Special Discounts Available!</h3>
+            <p>Answer the following questions to see if you qualify for a discount:</p>
+        <!-- All yes radio buttons should receive id of yes, even if one is checked -->
+<form> 
+    <p>Are you an airline employee?</p>
+        <p><input type="radio" id="yes" name="airline" value="Yes">
+        <label for="yes">Yes</label>
+        <input type="radio" id="no" name="airline" value="No">
+        <label for="no">No</label>
+        
+    <p>Are you currently active military or a military veteran?</p>
+        <p><input type="radio" id="yes2" name="military" value="Yes">
+        <label for="yes">Yes</label>
+        <input type="radio" id="no" name="military" value="No">
+        <label for="no">No</label>
+
+    <p>Are you 55 years old or older?</p>
+        <p><input type="radio" id="yes3" name="senior" value="Yes">
+        <label for="yes">Yes</label>
+        <input type="radio" id="no" name="senior" value="No">
+        <label for="no">No</label>
+      
+        <button type="button" onclick=" checkButton()"> Submit </button> 
+
+        <h3 id="disp" style= "color:green"> </h3>
+        
+
+    
+    
+    
+
+
+</form>
+</div>
 </section>
 
+
+
+
+
+
+
+
+
 <script src="main.js"></script>
+
 
 </body>
 </html>
