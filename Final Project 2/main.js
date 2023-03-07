@@ -22,6 +22,4 @@ function checkButton() {
             = 
              " Sorry, no discount available at this time";   
     }
-    
-   
 } 

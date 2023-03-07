@@ -1,9 +1,44 @@
 /* Featured and Expanded Item */
 
-.trulia-grid-item {
 
+.trulia-grid :active {
+    transform: scale(1.5);
+    transition: transform 0.15s;
 }
 
-.trulia-featured-grid-item {
+/* The Grid: Responsive Issues */
 
+@media screen and (min-width: 1600px) {
+    .trulia-grid {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+  }
+
+@media screen and (min-width: 1200px) and (max-width: 1599px) {
+    .trulia-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .trulia-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* The Header */
+
+@media screen and (max-width: 1024px) {
+    .trulia-nav-mobilehide {
+    display: none;
+    }
+   .trulia-nav-toggle {
+        display: block;
+        margin-left: 200%;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        display: flex;
+    }
 }
