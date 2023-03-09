@@ -1,104 +1,103 @@
-h1 {
-    text-align: center;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
-    color: green;
-    font-size: 70px;
+.header {
+    background-color:#4A50FA;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-bottom: 15px solid #2327AD;
+    color: #FAD14B;
+    margin: 0;
 }
 
-h2 {
-    text-align: center;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    color: green;
-    font-size: 35px;
-}
-
-.mainNavigation {
+.header h1 {
     display: flex;
-    height: 50px;
-    background-color: green;
-    color: orange;
+    justify-content: flex-start;
+    font-size: 75px;
 }
 
-.mainNavigation ul {
+.header h2 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav ul {
     display: flex;
     flex-direction: row;
-    gap: 30px;
-    list-style: none;
-    font-size: 15px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    justify-content: center;
+    gap: 30px; 
+    list-style-type: none; 
+    color: #2335AD;
+    font-weight: bold;
 }
 
-a:link { 
-    color: yellow; 
-    text-decoration: none; 
-}
-  
-a:visited { 
-    color: yellow;
-    text-decoration: none; 
-}
-
-.gridArea {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.blockContainer {
+    background-image: url("mountains.jpg");
+    height: 650px;
+    background-size: cover;
+    background-position: center; 
+    display: flex;
+    justify-content: flex-end;  
 }
 
-.petGrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 100%;
-}
-
-.adoptArea {
+.insertDiv {
+    background-color: #FAD14B ;
+    border: 2px solid blue;
+    border-radius: 5px;
+    width: 40%;
+    height: 25%;
+    margin-top: 200px;
+    margin-right: 50px;
     text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.adoptArea button {
-    font-size: 30px;
-    
+.insertDiv button {
+    border-radius: 5px;
+    background-color:#2327AD;
+    color:#FAD14B;
+    height: 50px;
+    width: 35%;
 }
 
-img {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-  
+.fluffArea {
+    border-radius: 10px;
+    border: 5px solid blue;
+    margin-top: 10px;
+}
+.fluffAreaBox {
+    border-radius: 6px;
+    /* border: 1px solid #FAD14B; */
+    margin-top: 20px;
+    margin-right: 300px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.headerphoto {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    image-rendering:optimizeQuality;
-    image-rendering: crisp-edges;
+.secondFluffAreaBox {
+    border-radius: 10px;
+    /* border: 1px solid #FAD14B; */
+    margin-top: 5px;  
+    margin-left: 300px; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.infoBoxes {
+.photoContainerItems {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    background-color: orange;
-    text-align: center;
-    height: 150px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
-
+    margin-top: 20px;
 }
 
-.petSearch {
-    background-color: green ;
+.photoContainerItems img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .2s;
 }
 
-.vetInfo {
-    background-color: blue;
+.photoContainerItems img:hover {
+    transform: scale(1.5);
 }
 
-.staffInfo {
-    background-color: yellow;
-}
-
-.newsInfo {
-    
+.discountBox {
+    border: 5px solid blue;
+    margin-top: 100px;
+    border-radius: 10px;
+    font-family:'Courier New', Courier, monospace;
 }

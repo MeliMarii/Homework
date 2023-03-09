@@ -1,86 +1,99 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Pet Adoption Center</title>
+    <head>
+    <title>Travel Agency</title>
 <link rel="stylesheet" href="main.css">
-</head>
+    </head>
 <body>
+    <header class="header">
+          <h1>On The Go Travel</h1>
+          <h2>A Travel Agency Designed For Everyone</h2>
+    </header>
 
-<header class="headerphoto">
-    <img src="images/petfamily2.jpg" alt="Multiple pets in a photo">
-</header>
-<h1>Pet Adoption Center</h1>
-<h2>Find pets who deserve a loving family and home</h2>
-</header>
-
-<nav class="mainNavigation">
+<nav class="nav">
     <ul>
-        <!-- link items in webpage. make about us link to bottom of page. link contact us to email form -->
-        <li><a href="#Home">Home</a></li>
-        <!-- link home page to main entry page -->
-        <li><a href="#About Us">About Us</a></li>
-        <li><a href="#Pet Finder List">Pet Finder List</a></li>
-        <li><a href="#Meet The Staff">Meet The Staff</a></li>
-        <li><a href="#Find A Veterinarian">Find A Veterinarian</a></li>
-        <li><a href="#Contact Us">Contact Us</a></li>
+        <!-- add links <a href> to each list item -->
+        <li>Find Destinations</li>
+        <li>Find Hotels</li>
+        <li>Best Solo Travel</li>
+        <li>Blog Post</li>
+        <li>About Us</li>
     </ul>
 </nav>
 
-<section class="gridArea">
-<div class="petGrid">
-    <img src="images/wesker1.jpg" alt="Picture of a cat in chair">
-    <img src="images/kingstonace1.jpg" alt="Picture of two yorkie dogs">
-    <img src="images/tooter1.jpg" alt="Picture of a red ear slider turtle">
-    <img src="images/bird.jpg" alt="Picture of two birds">
-    <img src="images/rabbit.jpg" alt="Picture of a white rabbit on the bed">
-    <img src="images/Iguana.jpg" alt="Picture of a large green iguana">
-    </div>
-<div class="adoptArea">
-    <h1>Adopt a pet today!</h1>
-    <p>Click button below to complete pet adoption forms</p>
-    <button>Begin Here</button>
+<section class="blockContainer">
+    <div class="insertDiv">
+        <p>Have you always wanted to explore the world but didn't know where to start?<br> Begin your journey here!<br> We have packages for all your travel needs.</p>
+        <!-- Create functions to make button work/clickable -->
+        <p><button>Contact Us</button></p>
     </div>
 </section>
 
-<section class="infoBoxes">
-    <div class="petSearch">
-        <p>Begin your search for a new pet here!</p>
-        <button>Pet Search</button>
+<section class="fluffArea">
+    <div class="fluffAreaBox">
+        <p>Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.</p>
     </div>
-    <div class="vetInfo">
-        <p>Find A Veterinarian</p>
-        <button>Click Here!</button>
-    </div>
-    <div class="staffInfo">
-        <p>Meet The Staff</p>
-        <button>Click Here!</button>
+    <div class="secondFluffAreaBox">
+        <p>More fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluff</p>
     </div>
 </section>
 
-<section class="newsInfo">
-    <div class="newsphoto">
-        <img src="images/wesker3.jpg" alt="">
-    </div>
-    <div class="signUp">
-        <p>Sign Up For Our Newsletter!</p>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name">
-
-            <label for="email">Email:</label>
-            <input type="text" id="email">
-            <button>Submit</button>
-        </form>
+<section class="photoContainer">
+    <div class="photoContainerItems">
+        <img src="city overview.jpg" alt="Woman looking over city view">
+        <img src="family travel 3.jpeg" alt="Family traveling together">
+        <img src="couple.jpg" alt="Couple on vacation on beach">
+        <img src="guy on cliff.jpg" alt="Man sitting on cliff in front of city">
     </div>
 </section>
 
+<section class="discount">
+        <div class="discountBox">
+            <h3>Special Discounts Available!</h3>
+            <p>Answer the following questions to see if you qualify for a discount:</p>
+        <!-- All yes radio buttons should receive id of yes, even if one is checked -->
+<form> 
+    <p>Are you an airline employee?</p>
+        <p><input type="radio" id="yes" name="airline" value="Yes">
+        <label for="yes">Yes</label>
+        <input type="radio" id="no" name="airline" value="No">
+        <label for="no">No</label>
+        
+    <p>Are you currently active military or a military veteran?</p>
+        <p><input type="radio" id="yes2" name="military" value="Yes">
+        <label for="yes">Yes</label>
+        <input type="radio" id="no" name="military" value="No">
+        <label for="no">No</label>
 
-<footer>
+    <p>Are you 55 years old or older?</p>
+        <p><input type="radio" id="yes3" name="senior" value="Yes">
+        <label for="yes">Yes</label>
+        <input type="radio" id="no" name="senior" value="No">
+        <label for="no">No</label>
+      
+    <p> <button type="button" onclick=" checkButton()"> Submit </button> </p>
 
-</footer>
+        <h3 id="disp" style= "color:#090DEB"> </h3>
+        
+
+    
+    
+    
+
+
+</form>
+</div>
+</section>
 
 
 
+
+
+
+
+
+
+<script src="main.js"></script>
 
 
 </body>

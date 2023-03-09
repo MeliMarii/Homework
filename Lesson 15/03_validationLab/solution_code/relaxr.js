@@ -5,15 +5,16 @@ function validateSignInForm(e){
     let messages = new Array;
 
     // Get password and validate
-    let pw=document.getElementById('inputPassword3').value;
-    if(pw.trim().length<3){
-        messages.push("Invalid Password");
+    let password=document.getElementById('inputPassword3').value;
+    if(password.length < 3){
+        messages.push("Password is less than 3 characters");
     }
 
     // Get email address and validate
-    let email=document.getElementById('inputEmail3').value;
+    let email = document.getElementById('inputEmail3');
+    console.log(ValidateEmail(email))
     if(!ValidateEmail(email)){
-        messages.push("Invalid Email");
+        messages.push("Please enter a valid email.")
     }
 
     // If no error messages show submit message
@@ -36,31 +37,40 @@ function validateSignInForm(e){
 function validateNewUserForm(e){
     e.preventDefault();
 
-     // Set up message array
-     let messages = new Array;
+    // Set up message array
+    let messages = [];
 
     // Get email address and validate
-    let email=document.getElementById('inputEmail').value;
+    let email = document.getElementById('inputEmail').value;
     if(!ValidateEmail(email)){
-        messages.push("Invalid Email");
+        messages.push("Email not valid")
     }
+
+
 
     // Get passwords and validate
-    let pw1=document.getElementById('inputPassword5').value;
-    let pw2=document.getElementById('inputPassword4').value;
-    if(pw1.trim().length<3 || pw2.trim().length<3 || pw1 != pw2){
-        messages.push("Invalid Passwords - either too short or they do not match");
-    }
+        // Make sure that both passwords match
+        let newPassword = document.getElementById('inputPassword5').value;
+        let newPasswordCucumber = document.getElementById('inputPassword4').value;
 
+        if(newPassword.length < 3 || newPasswordCucumber.length < 3){
+            messages.push("Password too short")
+        }
+
+        if(newPassword != newPasswordCucumber){
+            messages.push('Passwords do not match')
+        }
+        
     // Validate Names
-    let fname=document.getElementById('inputFName').value;
-    if(fname.trim().length < 3){
-        messages.push("Invalid First Name");
-    }
-    let lname=document.getElementById('inputLName').value;
-    if(fname.trim().length < 3){
-        messages.push("Invalid Last Name");
-    }
+        let fname = document.getElementById('inputFName').value;
+        if(fname.length < 3){
+            messages.push("Invalid first name");
+        }
+
+        let lname = document.getElementById('inputLName').value;
+        if(lname.length < 3){
+            messages.push("Invalid last name")
+        }
 
      // If no error messages show submit message
      let outputMessage = "";
@@ -82,12 +92,15 @@ function validateNewUserForm(e){
 
 
 function ValidateEmail(mail){
- if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)){
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
     return true;
   }else{
     return false;
   }
 }
+
+
+
 
 document.addEventListener('DOMContentLoaded', function(event) {
 
@@ -96,8 +109,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
         jQuery(this).tab('show')
     });
 
+    // Bind a validation function to the submit of the login form
     document.querySelector("#home .relaxrLoginForm").addEventListener('submit',validateSignInForm);
 
+    // Bind a validation function to the submit of the profile
     document.querySelector("#profile .relaxrLoginForm").addEventListener('submit',validateNewUserForm);
-
 });
