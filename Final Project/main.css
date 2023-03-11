@@ -1,15 +1,15 @@
 .header {
     background-color:#4A50FA;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    border-bottom: 15px solid #2327AD;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: #FAD14B;
-    margin: 0;
+    border-bottom: 35px solid #2327AD;
 }
 
 .header h1 {
     display: flex;
     justify-content: flex-start;
     font-size: 75px;
+    margin: 0;
 }
 
 .header h2 {
@@ -23,27 +23,54 @@
     justify-content: center;
     gap: 30px; 
     list-style-type: none; 
-    color: #2335AD;
     font-weight: bold;
+    font-size: 20px;
+}
+
+a{
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+a:hover { 
+    color:yellow; 
+    text-decoration: none; 
+    font-weight: none;
+    box-shadow: inset 200px 0 0 0 #54b3d6;
+   
+    
+}
+
+a:link {
+    text-decoration: none;
 }
 
 .blockContainer {
-    background-image: url("mountains.jpg");
-    height: 650px;
-    background-size: cover;
-    background-position: center; 
+    background-image: url("pexels-pixabay-163864.jpg");
+    height: 750px;
+    background-size:cover;
+    background-position:top;
     display: flex;
-    justify-content: flex-end;  
+    justify-content: flex-end;
+    margin-bottom: 100px;
+
+
+    /* background-image: url("mountains.jpg"); */
+    /* height: 650px; */
+    /* background-size: cover; */
+    /* background-position: center;  */
+    /* display: flex; */
+    /* justify-content: flex-end;   */
 }
 
 .insertDiv {
-    background-color: #FAD14B ;
-    border: 2px solid blue;
-    border-radius: 5px;
+    background-color: #FAD14B;
+    border: 7px solid blue;
+    border-radius: 20px;
     width: 40%;
     height: 25%;
-    margin-top: 200px;
+    margin-top: 150px;
     margin-right: 50px;
+    padding-top: 20px;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
@@ -56,24 +83,18 @@
     width: 35%;
 }
 
-.fluffArea {
-    border-radius: 10px;
-    border: 5px solid blue;
-    margin-top: 10px;
-}
+
 .fluffAreaBox {
     border-radius: 6px;
     /* border: 1px solid #FAD14B; */
     margin-top: 20px;
-    margin-right: 300px;
+    margin-right: 400px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .secondFluffAreaBox {
-    border-radius: 10px;
-    /* border: 1px solid #FAD14B; */
     margin-top: 5px;  
-    margin-left: 300px; 
+    margin-left: 400px; 
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -81,23 +102,72 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 100px;
 }
 
 .photoContainerItems img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform .2s;
+    /* transition: transform .2s; */
 }
 
-.photoContainerItems img:hover {
-    transform: scale(1.5);
+/* .photoContainerItems img:hover { */
+    /* transform: scale(1.5); */
+/* } */
+
+.listItems ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-weight: bold;
+    font-size: 35px;
+    color: #FAD14B;
 }
+
+.listItems li{
+    list-style-type: none; 
+}
+
 
 .discountBox {
-    border: 5px solid blue;
+    
     margin-top: 100px;
-    border-radius: 10px;
     font-family:'Courier New', Courier, monospace;
+    text-align: center;
 }
+
+.discountBox h2 {
+    font-weight: bold;
+}
+
+.rentalHouse {
+    border-radius: 5px;
+    border: 5px solid blue;
+    margin-top: 10px;
+}
+
+   
+.newsletterItems {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.newsletterItems img {
+    height: 400px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.newsletterBody {
+    border: 5px solid blue;
+    border-radius: 10px;
+    margin-top: 10px;
+    text-align: center;
+    padding-top: 75px;
+    
+}
+
+

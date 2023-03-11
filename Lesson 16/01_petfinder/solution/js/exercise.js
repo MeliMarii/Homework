@@ -1,94 +1,122 @@
 function selectPet(petType){
-    let thisPetData = petData[petType];
+
+    // Get the specific pet data set
+    let thePet = petData[petType];
+
+    console.log(thePet);
 
     // Set the title
-    document.querySelector(".petDisplayName").innerText = thisPetData.displayName;
+    document.querySelector('.petDisplayName').innerText = thePet['displayName'];
 
-    // Empty the specification data
-    document.querySelector(".petsDataSpecs").innerHTML="";
+    let petSpecs = "";
+    // Add the space required, size, weight
+        petSpecs += "<dt>Size</dt><dd>";
+        petSpecs += thePet.size;
+        petSpecs += "</dd>";
 
-    // Add the space required, size, weight, trainability
-    let listData = "";
+        petSpecs += "<dt>Weight</dt><dd>"+ thePet.weight  +"</dd>";
 
-    listData += "<dt>Size</dt><dd>"+thisPetData.size+"</dd>";
-    listData += "<dt>Weight</dt><dd>"+thisPetData.weight+"</dd>";
-    listData += "<dt>Space Required</dt><dd>"+thisPetData.spaceRequired+"</dd>";
+        petSpecs += "<dt>Space Required</dt><dd>"+ thePet.spaceRequired  +"</dd>";
 
-    if(thisPetData.trainability == true){
-        listData += "<dt>Trainable</dt><dd><img class='checkmark' src='img/200px-Gnome-emblem-default.svg.png' alt='Yes'/></dd>";
+    // Add logic to add the trainability and lap size images
+
+    petSpecs += "<dt>Trainable</dt><dd>";
+    if(thePet.trainability == true){
+        petSpecs += "<img src='img/200px-Gnome-emblem-default.svg.png' alt='Trainable' class='checkmark'>";
     }else{
-        listData += "<dt>Trainable</dt><dd><img class='checkmark' src='img/200px-Gnome-emblem-unreadable.svg.png' alt='No'/></dd>";
+        petSpecs += "<img src='img/200px-Gnome-emblem-unreadable.svg.png' alt='Not Trainable' class='checkmark'>";
     }
+    petSpecs += "</dd>";
 
-    if(thisPetData.fitsOnLap == true){
-        listData += "<dt>Fits on a Lap</dt><dd><img class='checkmark' src='img/200px-Gnome-emblem-default.svg.png' alt='Yes'/></dd>";
+    petSpecs += "<dt>Fits on Lap</dt><dd>";
+    if(thePet.fitsOnLap == true){
+        petSpecs += "<img src='img/200px-Gnome-emblem-default.svg.png' alt='Lap friendly' class='checkmark'>";
     }else{
-        listData += "<dt>Fits on a Lap</dt><dd><img class='checkmark' src='img/200px-Gnome-emblem-unreadable.svg.png' alt='No'/></dd>";
+        petSpecs += "<img src='img/200px-Gnome-emblem-unreadable.svg.png' alt='Does not fit' class='checkmark'>";
     }
+    
+    petSpecs += "</dd>";
 
-    // Add the foods
-    listData += "<dt>Foods</dt><dd><ul>";
-    for(var i=0;i<thisPetData.foods.length;i++){
-        listData += "<li>"+thisPetData.foods[i]+"</li>";
-    }
-    listData += "</ul></dd>";
-    document.querySelector(".petsDataSpecs").innerHTML= listData;
+    // Add the foods (may require loop)
+    petSpecs += "<dt>Foods</dt><dd><ul>"
+
+        // for(let oneFood of thePet.foods){
+        //     petSpecs += "<li>" + oneFood + "</li>";
+        // }
+
+        for(let i=0; i<thePet.foods.length; i++){
+            petSpecs += "<li>" + thePet.foods[i] + "</li>";
+        }
+
+    petSpecs += "</ul></dd>";
+
+    document.querySelector('.petsDataSpecs').innerHTML = petSpecs;
 
 
     // Update the images
 
-        // Set the main image
-        document.querySelector(".photoHaus .photoLarge").setAttribute("src",thisPetData.images[0].img);
-        document.querySelector(".photoHaus .photoLarge").setAttribute("alt",thisPetData.images[0].alt);
+        let thumbs = "";
 
-        // Empty the thumbnails
-        document.querySelector(".thumbHaus").innerHTML = "";
-    
-        // Add the thumbnails
-        var thumbnailsHTML = "";
-        for(var i=0;i<thisPetData.images.length;i++){
+        for(let i=0; i < thePet.images.length; i++){
 
-            thumbnailsHTML +=
-                "<a href=\""+thisPetData.images[i].img+"\"><img class=\"photoThumb\" src=\""+thisPetData.images[i].thumb+"\" alt=\""+thisPetData.images[i].alt+"\"/></a>";
-
+            thumbs += '<a href="' + thePet.images[i]['img'] + '"><img class="photoThumb" alt="' + thePet.images[i]['alt'] + '" src="' + thePet.images[i]['thumb'] + '"/></a>';
 
         }
-        document.querySelector(".thumbHaus").innerHTML = thumbnailsHTML;
 
+        document.querySelector('.thumbHaus').innerHTML = thumbs;
 
-        // Apply the click event to thumbnails
-        let thumbHausChildren = document.querySelectorAll(".thumbHaus > a");
+        document.querySelector('.photoLarge').setAttribute('alt',thePet.images[0]['alt']);
 
-        for(let i=0;i<thumbHausChildren.length;i++){
+        document.querySelector('.photoLarge').setAttribute('src',thePet.images[0]['img']);
 
-            thumbHausChildren[i].addEventListener("click",function(e){
+        // Apply the click event to thumbnails (note - this will likely need to be applied to the a and not the img direclty)
+
+        let allThumbs = document.querySelectorAll('.thumbHaus a');
+
+        for(let i=0; i < allThumbs.length; i++){
+            allThumbs[i].addEventListener('click',function(e){
+
+                // 
                 e.preventDefault();
-                document.querySelector(".photoHaus .photoLarge").setAttribute("src",this.getAttribute("href")); 
-                document.querySelector(".photoHaus .photoLarge").setAttribute("alt",this.querySelector("img").getAttribute("alt"));
+
+                // Get the alt
+                let newAlt = allThumbs[i].querySelector('img').getAttribute('alt');
+
+                // Get the big image
+                let newSrc = allThumbs[i].getAttribute('href');
+
+                // Set big image
+                document.querySelector('.photoLarge').setAttribute('src',newSrc);
+
+                // Set big image alt
+                document.querySelector('.photoLarge').setAttribute('alt',newAlt);
             });
         }
-       
-
-
 
     // Insert the ideal for
-    var idealOwner = "";
-    for(var i=0;i<thisPetData.idealOwner.length;i++){
-        idealOwner += "<li>"+thisPetData.idealOwner[i]+"</li>";
-    }
-    document.querySelector(".idealFor").innerHTML = idealOwner;
+        let ideal = "";
 
-    // Empty the Adoption Groups
+        for(let i=0; i < thePet.idealOwner.length; i++){
+            ideal += "<li>"+thePet.idealOwner[i]+"</li>";
+        }
+
+
+        document.querySelector('.idealFor').innerHTML = ideal;
+
 
     // Add the adoption groups
-    var adoptionGroups = "";
-    for(var i=0;i<thisPetData.adoption.length;i++){
-        adoptionGroups += "<li><a href=\""+thisPetData.adoption[i].url+"\" target=\"_blank\">"+thisPetData.adoption[i].name+"</a></li>";
-    }
-    document.querySelector(".adoptionGroups").innerHTML = adoptionGroups;
+        let adoption = "";
+        let sampleVar = "MORE Text";
+        let anotherVar = "Glorious Text";
 
+        for(let i=0; i < thePet.adoption.length; i++){
+            // adoption += '<li><a href="' + thePet.adoption[i].url + '">' + thePet.adoption[i].name + '</a></li>';
 
+            adoption += '<li><a href="' + thePet.adoption[i].url  +'">' + thePet.adoption[i].name + '</a></li>';
 
+        }
+
+        document.querySelector('.adoptionGroups').innerHTML = adoption;
 
 
 }// end selectPet
@@ -97,12 +125,29 @@ function selectPet(petType){
 
 document.addEventListener('DOMContentLoaded', function(event) {
 
-    // Initial value
-    selectPet( document.querySelector("#petType").value);
+    // Initial run
+    selectPet("dog");
 
     //Update whenever a new value is picked
-    document.querySelector("#petType").addEventListener('change',function(){
-        var petType = this.value;
-        selectPet(petType);
+    document.querySelector("#petType").addEventListener("change",function(){
+        let selectedPet = document.querySelector('#petType').value;
+
+        //let selectedPet = this.value;
+
+        selectPet(selectedPet)
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+

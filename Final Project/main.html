@@ -3,6 +3,7 @@
     <head>
     <title>Travel Agency</title>
 <link rel="stylesheet" href="main.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     </head>
 <body>
     <header class="header">
@@ -13,28 +14,27 @@
 <nav class="nav">
     <ul>
         <!-- add links <a href> to each list item -->
-        <li>Find Destinations</li>
-        <li>Find Hotels</li>
-        <li>Best Solo Travel</li>
-        <li>Blog Post</li>
-        <li>About Us</li>
+        <li><a href="#">Find Destinations</a></li>
+        <li><a href="#">Find Hotels</a></li>
+        <li><a href="#">Best Solo Travel</a></li>
+        <li><a href="#">Blog Post</a></li>
+        <li><a href="#">About Us</a></li>
     </ul>
 </nav>
 
 <section class="blockContainer">
     <div class="insertDiv">
         <p>Have you always wanted to explore the world but didn't know where to start?<br> Begin your journey here!<br> We have packages for all your travel needs.</p>
-        <!-- Create functions to make button work/clickable -->
-        <p><button>Contact Us</button></p>
+        <button>Contact Us</button>
     </div>
 </section>
 
 <section class="fluffArea">
     <div class="fluffAreaBox">
-        <p>Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.</p>
+        <p>Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text. Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.Some fluffy text.</p>
     </div>
     <div class="secondFluffAreaBox">
-        <p>More fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluff</p>
+        <p>More fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluff More fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluff More fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluffMore fluff</p>
     </div>
 </section>
 
@@ -45,14 +45,23 @@
         <img src="couple.jpg" alt="Couple on vacation on beach">
         <img src="guy on cliff.jpg" alt="Man sitting on cliff in front of city">
     </div>
+
+    <div class="listItems">
+    <ul>
+        <li><a href="#">Solo Travels</a></li>
+        <li><a href="#">Family Fun</a></li>
+        <li><a href="#">Romantic Getaways</a></li>
+        <li><a href="#">Excursions</a></li>
+    </ul>
+    </div>
 </section>
 
 <section class="discount">
         <div class="discountBox">
-            <h3>Special Discounts Available!</h3>
+            <h2>Special Discounts Available!</h2>
             <p>Answer the following questions to see if you qualify for a discount:</p>
         <!-- All yes radio buttons should receive id of yes, even if one is checked -->
-<form> 
+<form action=""> 
     <p>Are you an airline employee?</p>
         <p><input type="radio" id="yes" name="airline" value="Yes">
         <label for="yes">Yes</label>
@@ -74,27 +83,52 @@
     <p> <button type="button" onclick=" checkButton()"> Submit </button> </p>
 
         <h3 id="disp" style= "color:#090DEB"> </h3>
-        
-
-    
-    
-    
-
-
 </form>
 </div>
 </section>
 
+<section class="rentalHouse">
+    <div class="rentalHouseBox">
+        <p>Looking for rental properties only? Find rental homes for your vacation here:</p>
+        <button>Search</button>
+    </div>
+</section>
+
+
+
+<div class="newletter">
+    <div class="newsletterItems">
+        <img src="solo blue city.jpg" class="newsletterImg" alt="Woman walking in city">
+
+        <div class="newsletterBody">
+          <h4>Sign up for our monthly newletter!</h4>
+          <form action="">
+            <label for="fname">First Name:</label><br>
+            <input type="text" id="fname" name="fname" value=""><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value=""><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" value=""><br>
+            <button onclick="submitForm()">Submit</button>
+          </form> 
+      </div>
+    </div>
+</div>
+  
 
 
 
 
+<footer class="footer">
+
+
+
+
+</footer>
 
 
 
 
 <script src="main.js"></script>
-
-
 </body>
 </html>
