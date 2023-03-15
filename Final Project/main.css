@@ -1,41 +1,49 @@
+.video {
+    position: relative;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    display: flex;
+}
+
 .header {
-    background-color:#4A50FA;
+    position: absolute; 
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: #FAD14B;
-    border-bottom: 35px solid #2327AD;
+    padding: 20px;
 }
 
 .header h1 {
     display: flex;
     justify-content: flex-start;
-    font-size: 75px;
+    font-size: 35px;
     margin: 0;
 }
 
-.header h2 {
-    display: flex;
-    justify-content: flex-end;
+/* position:absolute Keeps nav bar above video */
+.nav {
+    position: absolute;  
+    margin-left: 50%;
 }
 
 .nav ul {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 30px; 
+    justify-content: flex-end;
+    gap: 30px;
     list-style-type: none; 
     font-weight: bold;
     font-size: 20px;
 }
 
 a{
-    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    transition: color .4s ease-in-out, box-shadow .3s ease-in-out;
 }
 
 a:hover { 
-    color:yellow; 
+    color:yellow;
     text-decoration: none; 
     font-weight: none;
-    box-shadow: inset 200px 0 0 0 #54b3d6;
+    box-shadow: inset 200px 0 0 0 #4086a0;
    
     
 }
@@ -44,50 +52,15 @@ a:link {
     text-decoration: none;
 }
 
-.blockContainer {
-    background-image: url("pexels-pixabay-163864.jpg");
-    height: 750px;
-    background-size:cover;
-    background-position:top;
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 100px;
-
-
-    /* background-image: url("mountains.jpg"); */
-    /* height: 650px; */
-    /* background-size: cover; */
-    /* background-position: center;  */
-    /* display: flex; */
-    /* justify-content: flex-end;   */
+.fluffArea {
+    border-bottom: 10px solid blue;
+    padding-bottom: 30px;
 }
-
-.insertDiv {
-    background-color: #FAD14B;
-    border: 7px solid blue;
-    border-radius: 20px;
-    width: 40%;
-    height: 25%;
-    margin-top: 150px;
-    margin-right: 50px;
-    padding-top: 20px;
-    text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.insertDiv button {
-    border-radius: 5px;
-    background-color:#2327AD;
-    color:#FAD14B;
-    height: 50px;
-    width: 35%;
-}
-
 
 .fluffAreaBox {
     border-radius: 6px;
     /* border: 1px solid #FAD14B; */
-    margin-top: 20px;
+    margin-top: 90px;
     margin-right: 400px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
@@ -98,11 +71,25 @@ a:link {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+.photoContainer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 50px;
+    
+}
+
+.photoContainer p {
+    border: 10px solid blue;
+    border-radius: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    
+}
+
 .photoContainerItems {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
-    margin-top: 100px;
 }
 
 .photoContainerItems img {
@@ -112,22 +99,47 @@ a:link {
     /* transition: transform .2s; */
 }
 
-/* .photoContainerItems img:hover { */
-    /* transform: scale(1.5); */
-/* } */
 
-.listItems ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    font-weight: bold;
-    font-size: 35px;
-    color: #FAD14B;
+
+
+
+
+
+.travelOptions {
+    padding-top: 40px;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    
+
+    
+    
 }
 
-.listItems li{
-    list-style-type: none; 
+.travelOptions li {
+    list-style: none;
+    padding: 15px;
+    
 }
+
+
+.travelOptionsContainer1 {
+    
+    
+   
+    
+}
+
+.travelOptionsContainer2 {
+    
+}
+
+
+
+
 
 
 .discountBox {
@@ -147,27 +159,45 @@ a:link {
     margin-top: 10px;
 }
 
-   
+.newsletter {
+    padding: 50px;
+    margin: 0 450px 0 450px;
+} 
 .newsletterItems {
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin-top: 20px;
+    border: 5px solid blue;
+    border-radius: 10px;
 }
 
 .newsletterItems img {
     height: 400px;
-    margin-top: 10px;
     border-radius: 10px;
 }
 
 .newsletterBody {
-    border: 5px solid blue;
     border-radius: 10px;
     margin-top: 10px;
     text-align: center;
-    padding-top: 75px;
-    
+    padding-top: 75px; 
 }
+
+.footer {
+   text-align: center; 
+}
+
+.footer p {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
 
 
