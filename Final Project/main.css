@@ -1,16 +1,12 @@
 .video {
-     position: relative;
+    position: relative;
     top: 0;
     left: 0;
     object-fit: cover;
-    display: flex; 
-
-
-
-
-
+    display: flex;  
+    
+    
 }
-
 
 
 .header {
@@ -39,10 +35,10 @@
     gap: 30px;
     list-style-type: none; 
     font-weight: bold;
-    font-size: 20px;
+    font-size: 20px;  
 }
 
-a{
+a {
     transition: color .4s ease-in-out, box-shadow .3s ease-in-out;
 }
 
@@ -50,7 +46,7 @@ a:hover {
     color:yellow;
     text-decoration: none; 
     font-weight: none;
-    box-shadow:inset 400px 0 0 0 #4086a0;  
+    box-shadow: inset 400px 0 0 0 #4086a0;  
 }
 
 a:link {
@@ -64,7 +60,6 @@ a:link {
 
 .fluffAreaBox {
     border-radius: 6px;
-    /* border: 1px solid #FAD14B; */
     margin-top: 90px;
     margin-right: 400px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -77,20 +72,32 @@ a:link {
 
 }
 
+.travelOptions {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;   
+}
+
+.travelOptions li {
+    list-style: none;
+    padding: 15px;   
+}
+
 .photoContainer {
     margin-top: 50px;
     text-align: center;
     font-size: 35px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;   
 }
 
 .photoContainer p {
     border: 5px solid blue;
     border-radius: 10px;
     margin-left: 20%;
-    margin-right: 20%;
-    
+    margin-right: 20%;    
 }
 
 .photoContainerItems {
@@ -107,46 +114,7 @@ a:link {
 
 
 
-
-
-
-
-.travelOptions {
-    padding-top: 40px;
-    margin-top: 100px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: center;
-    padding-left: 20%;
-    padding-right: 20%;
-    
-
-    
-    
-}
-
-.travelOptions li {
-    list-style: none;
-    padding: 15px;
-    
-}
-
-
-.travelOptionsContainer1 {
-    
-    
-   
-    
-}
-
-.travelOptionsContainer2 {
-    
-}
-
-
-
-
-
+/* Center of Page Items */
 
 .discountBox {
     border: 5px solid blue;
@@ -155,8 +123,7 @@ a:link {
     font-family:'Courier New', Courier, monospace;
     text-align: center;
     margin-left: 30%;
-    margin-right: 30%;
-    
+    margin-right: 30%;   
 }
 
 .discountBox h2 {
@@ -171,15 +138,11 @@ a:link {
     padding-bottom: 0;
 }
 
-
 .rentalHouseBox {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
-    margin-top: 10px;
-    
-   
-    
+    margin-top: 10px;    
 }
 
 .rentalHouseBox img {
@@ -188,7 +151,6 @@ a:link {
 }
 
 .newsletter {
-    /* padding: 50px; */
     margin: 0 480px 50px 480px;
 } 
 .newsletterItems {
@@ -227,5 +189,8 @@ a:link {
     gap: 30px;
 }
 
+/* Media Styles */
 
+@media screen and (max-width: 1200px) {
 
+}
