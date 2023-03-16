@@ -54,6 +54,7 @@ a:link {
 }
 
 .fluffArea {
+    margin-left: 10px;
     border-bottom: 10px solid blue;
     padding-bottom: 30px;
 }
