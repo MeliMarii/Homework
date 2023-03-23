@@ -1,19 +1,24 @@
+
 .video {
     position: relative;
     top: 0;
     left: 0;
-    object-fit: cover;
+    /* object-fit: cover; */
+    max-width: 99vw;
     display: flex;  
-    
-    
+    /* max-width: 100%; */
 }
 
+#myVideo {
+    max-width: 100%;
+}
 
 .header {
     position: absolute; 
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: #FAD14B;
     padding: 20px;
+    z-index: 20;
 }
 
 .header h1 {
@@ -25,17 +30,25 @@
 
 /* position:absolute Keeps nav bar above video */
 .nav {
+    z-index: 15;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     position: absolute;  
-    margin-left: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
 }
 
 .nav ul {
     display: flex;
     justify-content: flex-end;
-    gap: 30px;
+    gap: 10px;
     list-style-type: none; 
     font-weight: bold;
-    font-size: 20px;  
+    font-size: 20px; 
+    margin-right: 10px;
+    margin-top: 16px;
+    padding: 0;
 }
 
 a {
@@ -158,8 +171,6 @@ a:link {
     display: flex;
     justify-content: center;
     gap: 30px;
-    border: 5px solid blue;
-    border-radius: 10px;
 }
 
 .newsletterItems img {
@@ -192,6 +203,40 @@ a:link {
 
 /* Media Styles */
 
-@media screen and (max-width: 1200px) {
+/* @media screen and (min-width: 769px) and (max-width: 999px) {
+   
+    /* .fluffAreaBox {
+        padding: 0;
+    }
+} */ 
 
+@media screen and (max-width: 768) {
+    .footer ul {
+        background-color: orange;
+        display: flex;
+        flex-direction: column;
+    }
 }
+
+
+    /* .fluffAreaBox {
+        padding: 0;
+    }
+    .nav ul {
+        display: none;
+    }
+    .newsletterItems img {
+        display: none;
+        
+    }
+
+    .newsletterItems {
+        border: none;
+    }
+
+    .newsletterBody {
+       
+         */
+      
+        
+    /* } */

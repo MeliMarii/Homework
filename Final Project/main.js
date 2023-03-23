@@ -7,7 +7,7 @@ function checkButton() {
     
     
         let airlineValue = document.querySelector('input[name=airline]:checked').value;
-        // console.log(airlineValue)
+        
         if(airlineValue.toLowerCase() == "yes") { 
          
              responses.push("You qualify for a discount! Contact us with your airline crew employee number"); 
