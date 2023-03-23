@@ -30,7 +30,7 @@ function checkButton() {
        
     
        if(responses.length == 0) { 
-        responses.push(" Sorry, no discount available at this time");   
+        responses.push("Sorry, no discount available at this time");   
        }
     
        let display = ""
