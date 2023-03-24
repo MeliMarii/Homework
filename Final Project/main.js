@@ -1,4 +1,4 @@
-//Discount form area
+//Discount Form Area
 
 function checkButton() {  
     let responses = []
